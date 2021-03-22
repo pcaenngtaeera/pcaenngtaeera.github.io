@@ -18,6 +18,22 @@
       <hr>
     </div>
     <div class="row">
+      <div style="white-space: pre;" class="alert alert-primary col" role="alert">
+        <b>Instructions:</b>
+
+        Select a box from "1" to "4".
+        Pull until main prize.
+        Update "Remaining" column.
+        > Reset box if "Reset" is green or "Value" is less than "5th"
+        > Else continue pulling and update "Remaining"
+      </div>
+    </div>
+
+    <div class="row">
+      <hr>
+    </div>
+
+    <div class="row">
       <ul class="nav nav-pills">
         <li class="nav-item">
           <a class="nav-link active" onclick="changeBox(this)">1</a>
@@ -108,7 +124,7 @@
 
     <!-- Reset -->
     <div class="row">
-      <button id="reset-button" type="button" class="btn btn-success" onclick="resetTable()">Reset</button>
+      <button id="reset-button" type="button" class="btn btn-danger" onclick="resetTable()">Reset</button>
     </div>
 
   </div>
