@@ -77,12 +77,10 @@ function calculateChance() {
     pc_amulets = r_amulets / r_total
 
     // Value
-
     v_jewels = box.q_jewels * pc_jewels;
     v_amulets = amulet_value * pc_amulets
 
     // Box 5
-
     f_pc_jewels = box_5.c_jewels / box_5.c_total
     f_pc_amulets = box_5.c_amulets / box_5.c_total
     f_v_jewels = f_pc_jewels * box_5.q_jewels
@@ -98,6 +96,14 @@ function calculateChance() {
     document.getElementById("f-v-jewels").innerHTML = f_v_jewels.toFixed(4)
     document.getElementById("f-v-amulets").innerHTML = f_v_amulets.toFixed(4)
     document.getElementById("f-v-total").innerHTML = (f_v_jewels + f_v_amulets).toFixed(4)
+
+    // Highlight Box Reset
+
+    if ((v_jewels + v_amulets) < (f_v_jewels + f_v_amulets)) {
+        document.getElementById("reset-button").className = "btn btn-success"
+    } else {
+        document.getElementById("reset-button").className = "btn btn-danger"
+    }
 }
 
 function changeBox(select) {
