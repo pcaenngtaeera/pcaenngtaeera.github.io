@@ -1,0 +1,114 @@
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>プリコネ・ロット</title>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+    integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+</head>
+
+<body>
+  <div class="container">
+    <div class="row">
+      <h1 class="mx-auto">Little Lyrical Adventures!</h1>
+    </div>
+    <div class="row">
+      <hr>
+    </div>
+    <div class="row">
+      <ul class="nav nav-pills">
+        <li class="nav-item">
+          <a class="nav-link active" href="#" onclick="changeBox(this)">1</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#" onclick="changeBox(this)">2</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#" onclick="changeBox(this)">3</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#" onclick="changeBox(this)">4</a>
+        </li>
+      </ul>
+    </div>
+
+    <div class="row">
+      <hr>
+    </div>
+
+    <!-- Table -->
+    <div class="row">
+      <table class="table">
+        <thead class="thead-dark">
+          <tr>
+            <th>Item</th>
+            <th>Qty</th>
+            <th>Count</th>
+            <th>Remaining</th>
+            <th>%</th>
+            <th>Value</th>
+            <th>5th</th>
+          </tr>
+        </thead>
+        <tr>
+          <td>Jewels</td>
+          <td id="q-jewels"></td>
+          <td id="c-jewels"></td>
+          <td id="r-jewels" contenteditable style="background-color: antiquewhite;" onfocusout="calculateChance()"></td>
+          <td id="%-jewels"></td>
+          <td id="v-jewels"></td>
+          <td id="f-v-jewels"></td>
+        </tr>
+        <tr>
+          <td>Divine Amulet</td>
+          <td id="q-amulets">1</td>
+          <td id="c-amulets"></td>
+          <td id="r-amulets" contenteditable style="background-color: antiquewhite;" onfocusout="calculateChance()">
+          </td>
+          <td id="%-amulets"></td>
+          <td id="v-amulets"></td>
+          <td id="f-v-amulets"></td>
+        </tr>
+        <tfoot>
+          <th></th>
+          <th></th>
+          <th id="c-total"></th>
+          <th id="r-total" contenteditable style="background-color: antiquewhite;" onfocusout="calculateChance()"></th>
+          <th id="%-total"></th>
+          <th id="v-total"></th>
+          <th id="f-v-total"></th>
+        </tfoot>
+      </table>
+    </div>
+
+    <!-- Checkbox -->
+    <div class="row">
+      <div class="form-check">
+        <input type="checkbox" class="form-check-input" id="amulet_value_checkbox" onclick="calculateChance()">
+        <label class="form-check-label"><b>Amulet Value</b> - converts amulets to jewels using gacha rates</label>
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="form-check">
+        <input type="checkbox" class="form-check-input" id="fes_rates_checkbox" onclick="calculateChance()">
+        <label class="form-check-label"><b>Fes Rates</b> - uses 2x 3* rates for amulet value, decreasing it</label>
+      </div>
+    </div>
+
+    <div class="row">
+      <hr>
+    </div>
+
+    <!-- Reset -->
+    <div class="row">
+      <button type="button" class="btn btn-danger" onclick="resetTable()">Reset</button>
+    </div>
+
+  </div>
+  <script src="index.js"></script>
+</body>
+
+</html>
