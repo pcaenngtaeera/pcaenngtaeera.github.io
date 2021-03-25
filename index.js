@@ -98,7 +98,6 @@ function calculateChance() {
     document.getElementById("f-v-total").innerHTML = (f_v_jewels + f_v_amulets).toFixed(4)
 
     // Highlight Box Reset
-
     if ((v_jewels + v_amulets) < (f_v_jewels + f_v_amulets)) {
         document.getElementById("reset-button").className = "btn btn-success"
     } else {
@@ -107,7 +106,7 @@ function calculateChance() {
 }
 
 function changeBox(select) {
-    // should always be 1 element matching
+    // Should always be 1 element matching
     active = document.getElementsByClassName("nav-link active")[0]
     if (active !== select) {
         active.className = "nav-link"
@@ -116,6 +115,6 @@ function changeBox(select) {
     }
 }
 
-function changeRemaining(entry) {
-
+function selectText(cell) {
+    document.getSelection().setBaseAndExtent(cell, 0, cell, 1);
 }
