@@ -19,28 +19,28 @@ function resetTable() {
             q_jewels: 5,
             c_jewels: 5,
             c_amulets: 20,
-            c_total: 429
+            c_total: 430
         }
     } else if (active == 2) {
         box = {
             q_jewels: 10,
             c_jewels: 10,
             c_amulets: 25,
-            c_total: 551
+            c_total: 552
         }
     } else if (active == 3) {
         box = {
             q_jewels: 15,
             c_jewels: 15,
             c_amulets: 30,
-            c_total: 688
+            c_total: 689
         }
     } else if (active == 4) {
         box = {
             q_jewels: 25,
             c_jewels: 20,
             c_amulets: 35,
-            c_total: 805
+            c_total: 806
         }
     }
     document.getElementById("q-jewels").innerHTML = box.q_jewels
